@@ -4,14 +4,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/i9105p/i9105p.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/configs/common.mk)
+
+# Inherit telephony stuff
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_i9105p
+PRODUCT_NAME := aicp_i9105p
 PRODUCT_DEVICE := i9105p
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
@@ -23,3 +26,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=s2vep \
     BUILD_FINGERPRINT="samsung/s2vepxx/s2vep:4.2.2/JDQ39/I9105PXXUBOB2:user/release-keys" \
     PRIVATE_BUILD_DESC="s2vepxx-user 4.2.2 JDQ39 I9105PXXUBOB2 release-keys"
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Hemant Sharma (hemantbeast)"
