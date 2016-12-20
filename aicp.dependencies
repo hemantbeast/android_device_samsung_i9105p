@@ -9,7 +9,7 @@
         "remote": "github",
         "repository": "hemantbeast/android_kernel_samsung_galaxys2plus-common",
         "target_path": "kernel/samsung/galaxys2plus-common",
-        "revision": "android-7.0"
+        "revision": "n7.1"
     },
     {
         "remote": "github",
